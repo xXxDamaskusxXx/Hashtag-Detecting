@@ -14,16 +14,6 @@ client.get('statuses/user_timeline', params, function(error, tweets, response) {
   }
 });
 
-
-
-
-
-
-
-
-
-
-
 var stream = client.stream('statuses/filter', {track: 'javascript'});
 stream.on('data', function(event) {
   console.log(event && event.text);
